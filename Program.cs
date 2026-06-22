@@ -14,6 +14,18 @@ class Program
 
         Console.WriteLine(tag.Name);
 
+        Tag tag2 = new Tag(); // create an instance
+        tag2.Name = "hello there"; // give the new instance some "data"
+
+        Console.WriteLine(tag2.Name);
+
+        // 2. with a constructor method:
+        Tag tag3 = new Tag("even more data"); // create an instance
+        Console.WriteLine(tag3.Name);
+
+        Tag tag4 = new Tag("whats up"); // create an instance
+        Console.WriteLine(tag4.Name);
+
 
         return;
 
