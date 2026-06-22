@@ -5,24 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {  
-
-        Tag tag = new Tag(); // create an instance
-
-        tag.Name = "Hello world!"; // update the name property of this tag instance
-        
-        Console.WriteLine(tag.Name); // print the this instance's Name.
-
-
-        // just to show how to create many tags :)
-        Tag tag2 = new Tag(); // create an instance
-
-        tag2.Name = "Good bye world!"; // update the name property of this tag instance
-        
-        Console.WriteLine(tag2.Name); // print the this instance's Name.
-
-        return;
-
-
         // initialize the tagslist as an empty list
         List<string> tagsList = new List<string>();
 
@@ -108,8 +90,7 @@ class Program
 
             tag.Name = cleanedItem;
             
-            Console.WriteLine(tag.Name);
-            //tagsList.Add(tag); 
+            tagsList.Add(tag.Name); 
 
             // add tag to the list
             // tagsList.Add(cleanedItem); 
