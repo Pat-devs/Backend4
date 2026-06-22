@@ -5,14 +5,12 @@ class Program
 {
     static void Main(string[] args)
     {  
-        
-        Random random = new Random(); // create a new intance of the Random class object
 
-        for (int i = 0; i < 10; i++)
-        {
-            int diceResult = random.Next(1,7); // use the .next method to get the next "pseudo random" number.  
-            Console.WriteLine("Roll (" + i + "): "  + diceResult); // do something with the result
-        }
+        Tag tag = new Tag(); // create an instance
+
+        tag.Name = "Hello world!"; // update the name property of this tag instance
+        
+        Console.WriteLine(tag.Name); // print the this instance's Name.
 
         return;
 
@@ -93,9 +91,20 @@ class Program
         
         foreach (string item in tagsArray)
         {
+
             // cleanup the tag 
             string cleanedItem = item.Trim();
-            tagsList.Add(cleanedItem); 
+
+            // turn the tag-text into an instance (to use our Tag class model)
+            Tag tag = new Tag(); // create an instance
+
+            tag.Name = cleanedItem;
+            
+            Console.WriteLine(tag.Name);
+            //tagsList.Add(tag); 
+
+            // add tag to the list
+            // tagsList.Add(cleanedItem); 
         }
 
         return tagsList;
