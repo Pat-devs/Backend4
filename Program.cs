@@ -12,6 +12,14 @@ class Program
         
         Console.WriteLine(tag.Name); // print the this instance's Name.
 
+
+        // just to show how to create many tags :)
+        Tag tag2 = new Tag(); // create an instance
+
+        tag2.Name = "Good bye world!"; // update the name property of this tag instance
+        
+        Console.WriteLine(tag2.Name); // print the this instance's Name.
+
         return;
 
 
