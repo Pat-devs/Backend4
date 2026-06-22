@@ -7,24 +7,9 @@ class Program
     {  
 
         // constructor example
-
-        // 1. without a constructor method:
-        Tag tag = new Tag(); // create an instance
-        tag.Name = "some data"; // give the new instance some "data"
+        Tag tag = new Tag("some data"); // create an instance, and feed its constructor with data
 
         Console.WriteLine(tag.Name);
-
-        Tag tag2 = new Tag(); // create an instance
-        tag2.Name = "hello there"; // give the new instance some "data"
-
-        Console.WriteLine(tag2.Name);
-
-        // 2. with a constructor method:
-        Tag tag3 = new Tag("even more data"); // create an instance
-        Console.WriteLine(tag3.Name);
-
-        Tag tag4 = new Tag("whats up"); // create an instance
-        Console.WriteLine(tag4.Name);
 
 
         return;
@@ -113,9 +98,7 @@ class Program
             string cleanedItem = item.Trim();
 
             // turn the tag-text into an instance (to use our Tag class model)
-            Tag tag = new Tag(); // create an instance
-
-            tag.Name = cleanedItem;
+            Tag tag = new Tag(cleanedItem); // create an instance
             
             tagsList.Add(tag); 
 
