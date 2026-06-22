@@ -6,7 +6,7 @@ class Program
     static void Main(string[] args)
     {  
         // initialize the tagslist as an empty list
-        List<string> tagsList = new List<string>();
+        List<Tag> tagsList = new List<Tag>();
 
         Console.Clear();
         bool running = true;
@@ -39,15 +39,15 @@ class Program
             else if (choice == 3)
             {
                 string filePath = "taglist.txt"; // file path (folder + filename)
-                File.WriteAllLines(filePath, tagsList);
+                // File.WriteAllLines(filePath, tagsList);
             }
             else if (choice == 4)
             {
                 string filePath = "taglist.txt"; // file path (folder + filename)
                 if (File.Exists(filePath))
                 {
-                    string[] savedTags = File.ReadAllLines(filePath);
-                    tagsList = new List<string>(savedTags);
+                    // string[] savedTags = File.ReadAllLines(filePath);
+                    // tagsList = new List<string>(savedTags);
 
                     Console.WriteLine("Tags loaded from disk.");
                 }
@@ -73,13 +73,13 @@ class Program
     /// </summary>
     /// <param name="input"></param>
     /// <returns>Tagslist</returns>
-    static List<string> ParseTags(string input)
+    static List<Tag> ParseTags(string input)
     {
         // TODO-idea; check if tag already exists
-        string[] tagsArray = input.Split(",");
-        List<string> tagsList = new List<string>();
+        string[] tagsInputArray = input.Split(",");
+        List<Tag> tagsList = new List<Tag>();
         
-        foreach (string item in tagsArray)
+        foreach (string item in tagsInputArray)
         {
 
             // cleanup the tag 
@@ -90,7 +90,7 @@ class Program
 
             tag.Name = cleanedItem;
             
-            tagsList.Add(tag.Name); 
+            tagsList.Add(tag); 
 
             // add tag to the list
             // tagsList.Add(cleanedItem); 
