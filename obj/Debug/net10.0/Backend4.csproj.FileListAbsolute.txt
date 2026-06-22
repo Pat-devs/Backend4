@@ -1,0 +1,14 @@
+/Users/devpad/Documents/Kodehode/Backend4/bin/Debug/net10.0/Backend4
+/Users/devpad/Documents/Kodehode/Backend4/bin/Debug/net10.0/Backend4.deps.json
+/Users/devpad/Documents/Kodehode/Backend4/bin/Debug/net10.0/Backend4.runtimeconfig.json
+/Users/devpad/Documents/Kodehode/Backend4/bin/Debug/net10.0/Backend4.dll
+/Users/devpad/Documents/Kodehode/Backend4/bin/Debug/net10.0/Backend4.pdb
+/Users/devpad/Documents/Kodehode/Backend4/obj/Debug/net10.0/Backend4.GeneratedMSBuildEditorConfig.editorconfig
+/Users/devpad/Documents/Kodehode/Backend4/obj/Debug/net10.0/Backend4.AssemblyInfoInputs.cache
+/Users/devpad/Documents/Kodehode/Backend4/obj/Debug/net10.0/Backend4.AssemblyInfo.cs
+/Users/devpad/Documents/Kodehode/Backend4/obj/Debug/net10.0/Backend4.csproj.CoreCompileInputs.cache
+/Users/devpad/Documents/Kodehode/Backend4/obj/Debug/net10.0/Backend4.dll
+/Users/devpad/Documents/Kodehode/Backend4/obj/Debug/net10.0/refint/Backend4.dll
+/Users/devpad/Documents/Kodehode/Backend4/obj/Debug/net10.0/Backend4.pdb
+/Users/devpad/Documents/Kodehode/Backend4/obj/Debug/net10.0/Backend4.genruntimeconfig.cache
+/Users/devpad/Documents/Kodehode/Backend4/obj/Debug/net10.0/ref/Backend4.dll
