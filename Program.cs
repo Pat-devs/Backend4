@@ -8,17 +8,10 @@ class Program
         
         Random random = new Random(); // create a new intance of the Random class object
 
-        // we suspected that there is a "modulo bias" in the .next formula
-        // the code below was used to test to see if it is the case
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i < 10; i++)
         {
-            int diceResult = random.Next(1,6); // use the .next method to get the next "pseudo random" number. 
-            if (diceResult == 6)
-            {
-                Console.WriteLine("SIX!");
-                break;
-            } 
-            //Console.WriteLine("Roll (" + i + "): "  + diceResult); // do something with the result
+            int diceResult = random.Next(1,7); // use the .next method to get the next "pseudo random" number.  
+            Console.WriteLine("Roll (" + i + "): "  + diceResult); // do something with the result
         }
 
         return;
