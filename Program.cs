@@ -5,6 +5,21 @@ class Program
 {
     static void Main(string[] args)
     {  
+
+        // constructor example
+
+        // 1. without a constructor method:
+        Tag tag = new Tag(); // create an instance
+        tag.Name = "some data"; // give the new instance some "data"
+
+        Console.WriteLine(tag.Name);
+
+
+        return;
+
+
+
+
         // initialize the tagslist as an empty list
         List<Tag> tagsList = new List<Tag>();
 
