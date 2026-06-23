@@ -3,6 +3,8 @@ class Program
 {
     static void Main(string[] args)
     {  
+        TagService tagService = new TagService(); // intitialze an instance of the tagservice
+
         // initialize the tagslist as an empty list
         List<Tag> tagsList = new List<Tag>();
 
@@ -28,7 +30,9 @@ class Program
             {
                 Console.WriteLine("Enter tags separated by comma:");
                 string userInputTags = Console.ReadLine();
-                tagsList = ParseTags(userInputTags);
+
+
+                tagsList = tagService.ParseTags(userInputTags);
             }
             else if (choice == 2)
             {
@@ -63,33 +67,6 @@ class Program
                 Console.WriteLine("invalid choice");
             }
         }
-
     }
-
-    /// <summary>
-    /// Parses input strings, removing any whitespaces into a list
-    /// </summary>
-    /// <param name="input"></param>
-    /// <returns>Tagslist</returns>
-    static List<Tag> ParseTags(string input)
-    {
-        // TODO-idea; check if tag already exists
-        string[] tagsInputArray = input.Split(",");
-        List<Tag> tagsList = new List<Tag>();
-        
-        foreach (string item in tagsInputArray)
-        {
-
-            // cleanup the tag 
-            string cleanedItem = item.Trim();
-
-            // turn the tag-text into an instance (to use our Tag class model)
-            Tag tag = new Tag(cleanedItem); // create an instance
-            
-            tagsList.Add(tag); 
-        }
-
-        return tagsList;
-    }
-
 }
+
