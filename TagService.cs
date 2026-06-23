@@ -28,6 +28,13 @@ class TagService
 
             // cleanup the tag 
             string cleanedItem = item.Trim();
+            // check if tag exists
+            if (TagExists(tagsList, cleanedItem))
+            {
+                Console.WriteLine("Skipped " + cleanedItem + " because it already exists!");
+                continue; // skips this iteration of the loop (at this line, so code below here will not execute during this iteration)
+            }
+
 
             // turn the tag-text into an instance (to use our Tag class model)
             Tag tag = new Tag(cleanedItem); // create an instance
