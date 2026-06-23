@@ -1,4 +1,4 @@
-class TagService
+class TagService // a service that "serves" a model (or models)
 {
     public bool TagExists(List<Tag> tags, string name)
     {
@@ -19,7 +19,6 @@ class TagService
     /// <returns>Tagslist</returns>
     public List<Tag> ParseTags(string input)
     {
-        // TODO-idea; check if tag already exists
         string[] tagsInputArray = input.Split(",");
         List<Tag> tagsList = new List<Tag>();
         
@@ -31,12 +30,11 @@ class TagService
             // check if tag exists
             if (TagExists(tagsList, cleanedItem))
             {
-                Console.WriteLine("Skipped " + cleanedItem + " because it already exists!");
-                continue; // skips this iteration of the loop (at this line, so code below here will not execute during this iteration)
+                continue; // skips this iteration
             }
 
 
-            // turn the tag-text into an instance (to use our Tag class model)
+            // turn the tag-text into an instance
             Tag tag = new Tag(cleanedItem); // create an instance
             
             tagsList.Add(tag); 

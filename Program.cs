@@ -20,6 +20,7 @@ class Program
             Console.WriteLine("3. Save tags");
             Console.WriteLine("4. Load tags");
             Console.WriteLine("5. Exit");
+            //Console.WriteLine("6. Search for a tag"); // todo :)
             Console.WriteLine();
             Console.Write("Choose an option: ");
 

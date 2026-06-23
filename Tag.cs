@@ -1,4 +1,4 @@
-class Tag
+class Tag // model or blueprint
 {
     public string Name { get; set; }
 
@@ -6,5 +6,4 @@ class Tag
     {
         Name = tagText;
     }
-    
 }
