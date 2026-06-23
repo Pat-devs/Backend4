@@ -1,22 +1,8 @@
-﻿using System.Reflection.Emit;
-
-namespace Backend4;
+﻿namespace Backend4;
 class Program
 {
     static void Main(string[] args)
     {  
-
-        // constructor example
-        Tag tag = new Tag("some data"); // create an instance, and feed its constructor with data
-
-        Console.WriteLine(tag.Name);
-
-
-        return;
-
-
-
-
         // initialize the tagslist as an empty list
         List<Tag> tagsList = new List<Tag>();
 
@@ -101,9 +87,6 @@ class Program
             Tag tag = new Tag(cleanedItem); // create an instance
             
             tagsList.Add(tag); 
-
-            // add tag to the list
-            // tagsList.Add(cleanedItem); 
         }
 
         return tagsList;
