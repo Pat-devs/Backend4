@@ -3,21 +3,6 @@ class Program
 {
     static void Main(string[] args)
     {  
-        for (int i = 0; i < 34; i++)
-        {
-            if (i == 5)
-            {
-                continue; // skip this iteration
-            }
-            if (i == 7)
-            {
-                break; // terminate the loop
-            }
-
-            Console.WriteLine(i);
-        }
-
-        return;
 
         TagService tagService = new TagService(); // intitialze an instance of the tagservice
 
