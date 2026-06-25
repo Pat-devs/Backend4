@@ -5,12 +5,9 @@ class Program
     {  
         TagRepository tagRepository = new TagRepository("tagslist.txt");
 
-        //TagRepository.Save();
-        //TagRepository.Load()
-
-        return;
 
         TagService tagService = new TagService(); // intitialze an instance of the tagservice
+
 
         // initialize the tagslist as an empty list
         List<Tag> tagsList = new List<Tag>();
@@ -48,17 +45,7 @@ class Program
             }
             else if (choice == 3)
             {
-                string filePath = "taglist.txt"; // file path (folder + filename)
-                
-                // convert list of tags to list of strings (to make it useful outside of C#)
-                List<string> lines = new List<string>();
-
-                foreach (Tag tag in tagsList)
-                {
-                    lines.Add(tag.Name);
-                }
-
-                File.WriteAllLines(filePath, lines);
+                tagRepository.Save(tagsList);
             }
             else if (choice == 4)
             {
