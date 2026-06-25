@@ -43,7 +43,16 @@ class Program
             else if (choice == 3)
             {
                 string filePath = "taglist.txt"; // file path (folder + filename)
-                // File.WriteAllLines(filePath, tagsList);
+                
+                // convert list of tags to list of strings (to make it useful outside of C#)
+                List<string> lines = new List<string>();
+
+                foreach (Tag tag in tagsList)
+                {
+                    lines.Add(tag.Name);
+                }
+
+                File.WriteAllLines(filePath, lines);
             }
             else if (choice == 4)
             {
