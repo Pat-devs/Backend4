@@ -2,15 +2,25 @@ class TagService // a service that "serves" a model (or models)
 {
     public bool TagExists(List<Tag> tags, string name)
     {
-        foreach (Tag tag in tags)
-        {
-            if (tag.Name == name)
-            {
-                return true; // return terminates the method
-            }
-        }
+        // loop through tags => check if name matches any exiting tag ======>>> returns true or false
+        
+        //foreach (Tag tag in tags)
+        //{
+        //    if (tag.Name == name)
+        //    {
+        //        return true; // return terminates the method
+        //    }
+        //}
 
-        return false;
+        //return false;
+
+
+        // .Any method takes a function as argument ... foreach tag evaluate against a logical bool value
+        bool doesItExist = tags.Any(tag => tag.Name == name);
+
+        Console.WriteLine("Does " + name + " already exist? " + doesItExist);
+
+        return doesItExist;
     }
     /// <summary>
     /// Parses input strings, removing any whitespaces into a list

@@ -4,10 +4,7 @@ class Program
     static void Main(string[] args)
     {  
         TagRepository tagRepository = new TagRepository("tagslist.txt");
-
-
         TagService tagService = new TagService(); // intitialze an instance of the tagservice
-
 
         // initialize the tagslist as an empty list
         List<Tag> tagsList = new List<Tag>();
