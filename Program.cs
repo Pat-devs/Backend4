@@ -3,6 +3,43 @@ class Program
 {
     static void Main(string[] args)
     {  
+
+        // Simple Linq & Lambda examples
+
+        List<string> things = new List<string>
+        {
+            "coffee", "tea", "water", "laptop", "car", "coffee"
+        };
+
+        // check if we have any "tea"
+
+        foreach (string thing in things)
+        {
+            if (thing == "tea")
+            {
+                Console.Write("we have tea");
+            }
+        }
+
+        Console.WriteLine();
+        // check if we have any "coffee" using linq
+
+        Console.WriteLine(" Coffee? " + things.Any(thing => thing == "coffee") ); // returns (bool) if anything matches
+
+        Console.WriteLine();
+
+        var whereIsMyCoffee = things.Where(thing => thing == "coffee" || thing == "tea" || thing == "car");
+        
+        foreach (var item in whereIsMyCoffee)
+        {
+            Console.WriteLine(item);
+        }
+        
+        //Console.WriteLine("where??? " + whereIsMyCoffee.FirstOrDefault() ); // returns matching elements
+
+
+        return;
+
         TagRepository tagRepository = new TagRepository("tagslist.txt");
         TagService tagService = new TagService(); // intitialze an instance of the tagservice
 
