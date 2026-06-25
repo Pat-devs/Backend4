@@ -23,4 +23,30 @@ class TagRepository
 
         File.WriteAllLines(_filePath, lines);
     }
+
+    public List<Tag> Load()
+    {
+        // create an empty list of tags
+        List<Tag> tags = new List<Tag>();
+
+        if (File.Exists(_filePath))
+        {
+            string[] savedTags = File.ReadAllLines(_filePath);
+
+            foreach (string line in savedTags)
+            {
+                Tag tag = new Tag(line);
+                tags.Add(tag);
+            }
+
+            Console.WriteLine("Tags loaded from disk.");
+
+            return tags;
+        }
+        else
+        {
+            Console.WriteLine("Tags failed to load!");
+            return tags;
+        }
+    }
 }

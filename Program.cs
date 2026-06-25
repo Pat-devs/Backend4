@@ -36,7 +36,6 @@ class Program
                 Console.WriteLine("Enter tags separated by comma:");
                 string userInputTags = Console.ReadLine();
 
-
                 tagsList = tagService.ParseTags(userInputTags);
             }
             else if (choice == 2)
@@ -49,23 +48,7 @@ class Program
             }
             else if (choice == 4)
             {
-                string filePath = "taglist.txt"; // file path (folder + filename)
-                if (File.Exists(filePath))
-                {
-                    string[] savedTags = File.ReadAllLines(filePath);
-
-                    foreach (string line in savedTags)
-                    {
-                        Tag tag = new Tag(line);
-                        tagsList.Add(tag);
-                    }
-
-                    Console.WriteLine("Tags loaded from disk.");
-                }
-                else
-                {
-                    Console.WriteLine("Tags failed to load!");
-                }
+                tagsList = tagRepository.Load();
             }
             else if (choice == 5)
             {
