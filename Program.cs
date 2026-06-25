@@ -3,6 +3,12 @@ class Program
 {
     static void Main(string[] args)
     {  
+        TagRepository tagRepository = new TagRepository("tagslist.txt");
+
+        //TagRepository.Save();
+        //TagRepository.Load()
+
+        return;
 
         TagService tagService = new TagService(); // intitialze an instance of the tagservice
 
