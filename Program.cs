@@ -59,8 +59,13 @@ class Program
                 string filePath = "taglist.txt"; // file path (folder + filename)
                 if (File.Exists(filePath))
                 {
-                    // string[] savedTags = File.ReadAllLines(filePath);
-                    // tagsList = new List<string>(savedTags);
+                    string[] savedTags = File.ReadAllLines(filePath);
+
+                    foreach (string line in savedTags)
+                    {
+                        Tag tag = new Tag(line);
+                        tagsList.Add(tag);
+                    }
 
                     Console.WriteLine("Tags loaded from disk.");
                 }
